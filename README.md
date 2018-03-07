@@ -1,6 +1,8 @@
 # node-ax25-seqpacket
 socket(AF_AX25, SOCK_SEQPACKET) binding for node.js
 
+[![Build Status](https://travis-ci.org/srl295/node-ax25-seqpacket.svg?branch=master)](https://travis-ci.org/srl295/node-ax25-seqpacket)
+
 work in progress
 
 # [LICENSE](LICENSE)
