@@ -14,6 +14,22 @@
 
 #include <node_api.h>
 
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/wait.h>
+
+#include <netax25/ax25.h>
+#include <netax25/axconfig.h>
+#include <netax25/axlib.h>
+#include <netax25/nrconfig.h>
+#include <netax25/rsconfig.h>
+
+#include <netrom/netrom.h>
+
+#include <netrose/rose.h>
+
 namespace ax25 {
   napi_value Method(napi_env env, napi_callback_info args) {
     napi_value greeting;
