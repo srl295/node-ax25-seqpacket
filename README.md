@@ -5,6 +5,24 @@ socket(AF_AX25, SOCK_SEQPACKET) binding for node.js
 
 work in progress
 
+## building
+
+### local
+
+```shell
+node-gyp rebuild
+npm i
+npm t
+```
+
+### using docker
+
+if you do not really have a linux ax25 box
+
+```shell
+sh dockerfile/try-all.sh
+```
+
 # [LICENSE](LICENSE)
 
    Copyright 2018 Steven R. Loomis
