@@ -31,7 +31,7 @@
 #include <netrose/rose.h>
 
 namespace ax25 {
-  napi_value Method(napi_env env, napi_callback_info args) {
+  napi_value CreateAndBind(napi_env env, napi_callback_info args) {
     napi_value greeting;
     napi_status status;
 
@@ -44,10 +44,10 @@ namespace ax25 {
     napi_status status;
     napi_value fn;
 
-    status = napi_create_function(env, nullptr, 0, Method, nullptr, &fn);
+    status = napi_create_function(env, nullptr, 0, CreateAndBind, nullptr, &fn);
     if(status != napi_ok) return nullptr;
 
-    status = napi_set_named_property(env, exports, "hello", fn);
+    status = napi_set_named_property(env, exports, "createAndBind", fn);
     if (status != napi_ok) return nullptr;
     return exports;
 
